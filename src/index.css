@@ -213,9 +213,9 @@ color: #FFFFFF;
 
 @media (max-width: 414px) {
   .backgroundImg {
-    background-position-x: -200px;
+    background-position: 60% 0;
   }
-
+  
   .logo {
     background-image: url('./images/oldLogo_white.png');
     width: 100%;
