@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+  font-family: system-ui;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(180deg, #D37C91 0%, #582D79 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.backgroundImg {
+  background-image: url('./images/head_desktop.png');
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: 0;
+}
+
+.logo {
+  background-image: url('./images/oldLogo_white.png');
+  width: 100%;
+  height: 100%;
+  background-size: 300px, 300px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+}
+
+.icon-wrapper {
+  transform: rotate(45deg);
+}
+
+.appt {
+box-sizing: content-box;
+position: fixed;
+width: 35px;
+height: 35px;
+left: 24px;
+top: 100px;
+border: 2px solid #FFFFFF;
+box-shadow: 0 4px 14px rgba(24, 1, 24, 0.5);
+transform: rotate(-45deg);
+transition: 0.3s;
+transform-origin: center;
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.shopping {
+  box-sizing: content-box;
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  left: 24px;
+  top: 195px;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 14px rgba(24, 1, 24, 0.5);
+  transform: rotate(-45deg);
+  transform-origin: center;
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.contact {
+box-sizing: content-box;
+position: fixed;
+width: 35px;
+height: 35px;
+left: 24px;
+top: 290px;
+border: 2px solid #FFFFFF;
+box-shadow: 0 4px 14px rgba(24, 1, 24, 0.5);
+transform: rotate(-45deg);
+transition: 0.3s;
+transform-origin: center;
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.apptText {
+position: fixed;
+width: 95px;
+height: 22px;
+left: 75px;
+top: 107px;
+font-family: monospace;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 22px;
+color: #FFFFFF;
+}
+
+.apptText,
+.shoppingText,
+.contactText {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+.appt:hover {
+  transform: rotate(45deg);
+}
+
+.shopping:hover {
+  transform: rotate(45deg);
+}
+
+
+.contact:hover {
+  transform: rotate(45deg);
+}
+
+.shoppingText {
+position: fixed;
+width: 94px;
+height: 22px;
+left: 75px;
+top: 202px;
+font-family: monospace;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 22px;
+color: #FFFFFF;
+}
+
+.contactText {
+position: fixed;
+width: 87px;
+height: 22px;
+left: 75px;
+top: 297px;
+font-family: monospace;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 22px;
+color: #FFFFFF;
+}
+
+.routes-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.shoppingPage {
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 999;
+}
+
+.contactPage {
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 999;
+}
+
+@media (max-width: 414px) {
+  .backgroundImg {
+    background-position-x: -200px;
+  }
+
+  .logo {
+    background-image: url('./images/oldLogo_white.png');
+    width: 100%;
+    height: 100%;
+    background-size: 200px, 200px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    position: fixed;
+    bottom: 100px;
+    left: 24px;
+  }
+
+  .appt {
+    box-sizing: border-box;
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    left: 50px;
+    bottom: 24px;
+    top: auto;
+    border: 2px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: rotate(-45deg);
+    }
+    
+    .shopping {
+      box-sizing: border-box;
+      position: fixed;
+      width: 35px;
+      height: 35px;
+      left: 50%;
+      bottom: 24px;
+      top: auto;
+      margin-left: -17.5px; /* Half of the width */
+      border: 2px solid #FFFFFF;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      transform: rotate(-45deg);
+      transform-origin: center;
+    }
+
+    .shopping:hover {
+      transform: rotate(45deg);
+    }
+    
+    .contact {
+    box-sizing: border-box;
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    right: 50px;
+    bottom: 24px;
+    top: auto;
+    left: auto;
+    border: 2px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: rotate(-45deg);
+    }
+
+    .apptText {
+      display: none;
+    }
+
+    .shoppingText {
+      display: none;
+    }
+
+    .contactText {
+      display: none;
+    }
+}
